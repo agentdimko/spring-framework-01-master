@@ -9,7 +9,9 @@
         <!--<constructor-arg name="age" value="22"/>-->
     <!--</bean>-->
 
-    <bean id="personDao" class="ru.otus.spring01.dao.PersonDaoSimple"></bean>
+    <bean id="personDao" class="ru.otus.spring01.dao.PersonDaoSimple">
+        <property name="defaultAge" value="28"/>
+    </bean>
 
     <bean id="personService" class="ru.otus.spring01.service.PersonServiceImpl">
         <property name="dao" ref="personDao"/>
